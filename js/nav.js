@@ -46,29 +46,22 @@
     }
   }
 
-  const form = document.querySelector("#contact-form");
-  if (!form) return;
-
-  const status = form.querySelector(".form-status");
-
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const data = new FormData(form);
-    const name = String(data.get("name") || "").trim();
-    const email = String(data.get("email") || "").trim();
-    const message = String(data.get("message") || "").trim();
-
-    if (!name || !email || !message) {
-      if (status) status.textContent = "Please fill in all fields.";
-      return;
-    }
-
-    const subject = encodeURIComponent(`Portfolio note from ${name}`);
-    const body = encodeURIComponent(`${message}\n\n— ${name}\n${email}`);
-    window.location.href = `mailto:wilkersimon15@gmail.com?subject=${subject}&body=${body}`;
-    if (status) {
-      status.textContent =
-        "Your email app should open with this note. If it does not, write wilkersimon15@gmail.com — the form was not cleared.";
-    }
-  });
+  const copyBtn = document.querySelector(".btn-copy-email");
+  if (copyBtn) {
+    copyBtn.addEventListener("click", async () => {
+      const email = copyBtn.getAttribute("data-email") || "wilkersimon15@gmail.com";
+      try {
+        await navigator.clipboard.writeText(email);
+        const originalText = copyBtn.textContent;
+        copyBtn.textContent = "Copied!";
+        copyBtn.classList.add("is-copied");
+        setTimeout(() => {
+          copyBtn.textContent = originalText;
+          copyBtn.classList.remove("is-copied");
+        }, 2000);
+      } catch {
+        window.location.href = `mailto:${email}`;
+      }
+    });
+  }
 })();

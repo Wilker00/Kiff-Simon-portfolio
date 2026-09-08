@@ -249,22 +249,36 @@
 
 .contact-layout {
   display: grid;
-  grid-template-columns: 1fr 1.05fr;
+  grid-template-columns: minmax(0, 1.2fr) minmax(10rem, 0.7fr);
   gap: 3rem;
   align-items: start;
 }
 
 .contact-email {
   font-family: var(--font-display);
-  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  font-size: clamp(1.45rem, 3.4vw, 2.15rem);
+  line-height: 1.15;
   display: inline-block;
-  margin: 0.35rem 0 1.25rem;
+  max-width: 100%;
+  margin: 0.35rem 0 0;
+  overflow-wrap: anywhere;
 }
 
-.form-panel {
-  padding: 0;
-  background: none;
-  border: 0;
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 1.25rem 0 1rem;
+}
+
+.contact-also {
+  display: grid;
+  justify-items: start;
+  gap: 0.35rem;
+}
+
+.contact-also .meta {
+  margin-bottom: 0.45rem;
 }
 
 .error-page {
