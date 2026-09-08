@@ -64,7 +64,8 @@ h3,
 h4,
 .h-display,
 .h-xl,
-.h-lg {
+.h-lg,
+.h-md {
   font-family: var(--font-display);
   font-weight: 600;
   font-optical-sizing: auto;
@@ -91,6 +92,10 @@ h3,
 .h-lg {
   font-size: var(--text-lg);
   line-height: 1.2;
+}
+
+.h-md {
+  font-size: var(--text-lg);
 }
 
 p {
