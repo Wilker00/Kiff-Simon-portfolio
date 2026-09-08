@@ -317,19 +317,6 @@ h4 {
   opacity: 1;
 }
 
-.mark-reel__fallback {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  pointer-events: none;
-}
-
-.mark-reel.is-ready .mark-reel__fallback {
-  display: none;
-}
-
 .mark-reel--sign {
   width: 3.35rem;
   height: 4.15rem;

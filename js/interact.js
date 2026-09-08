@@ -181,7 +181,6 @@
         node.classList.toggle("is-on", index === last);
         if (canTween) gsap.set(node, { opacity: index === last ? 1 : 0 });
       });
-      reel.classList.add("is-ready");
 
       if (reduced || nodes.length < 2) return;
 
