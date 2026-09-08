@@ -45,7 +45,7 @@
 .grain-sheet {
   position: fixed;
   inset: 0;
-  z-index: 80;
+  z-index: 0;
   pointer-events: none;
   opacity: calc(0.028 + var(--pv) * 0.03);
   mix-blend-mode: multiply;
@@ -146,10 +146,14 @@
   }
 }
 
+.nav-resume {
+  display: none;
+}
+
 .nav-toggle {
   display: none;
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2.75rem;
+  height: 2.75rem;
   border: 1px solid var(--ink);
   background: transparent;
   align-items: center;
@@ -262,13 +266,15 @@ body.nav-open .nav-toggle span:nth-child(3) {
     bottom: -0.15rem;
   }
 
+  .site-nav .nav-resume {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+  }
+
   body.nav-open .site-nav {
     opacity: 1;
     pointer-events: auto;
-  }
-
-  .header-actions .btn-ghost {
-    display: none;
   }
 
   .footer-grid,

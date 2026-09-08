@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages.css">
   <link rel="stylesheet" href="css/visual-v2.css">
-  <link rel="stylesheet" href="css/art-direction.css?v=tools3">
+  <link rel="stylesheet" href="css/art-direction.css?v=doodle4">
 </head>
 <body data-page="about">
   <a class="skip-link" href="#content">Skip to content</a>
@@ -31,15 +31,16 @@
   <header class="site-header">
     <div class="container-xl site-header__inner">
       <a class="wordmark" href="index.html">Kiff Simon</a>
-      <nav class="site-nav" aria-label="Primary">
+      <nav class="site-nav" id="primary-nav" aria-label="Primary">
         <a href="work.html">Work</a>
         <a href="about.html" aria-current="page">About</a>
         <a href="contact.html">Contact</a>
+        <a class="nav-resume" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
       </nav>
       <div class="header-actions">
         <p class="avail">Open to internships and roles</p>
-        <a class="btn-ghost" href="assets/resume.pdf">Resume</a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open menu">
+        <a class="btn-ghost" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -68,6 +69,18 @@
               <p>The work now is design plus build. Sprinkler Repair System is a live site I designed and shipped for a South Florida client. Hackathons are where I do that in a room: Communify (1st, Crossingz), Neo Sapiens (2nd, Miami Hack Week). Days on the Coconut Creek campus I still treat flyers, scheduling, and student inquiries as product problems, not a ticket pile.</p>
               <p>I speak English, Spanish, French, and Creole. When I’m not in Figma or a repo I take photographs. I ship with AI in the loop without pretending the tool is the craft.</p>
             </div>
+
+            <ul class="signals">
+              <li><img class="ico" src="assets/images/icons/code-fill.svg" alt="">Software</li>
+              <li><img class="ico" src="assets/images/icons/sparkle-fill.svg" alt="">AI</li>
+              <li><img class="ico" src="assets/images/icons/pencil-simple-fill.svg" alt="">Product design</li>
+              <li><img class="ico" src="assets/images/icons/cpu-fill.svg" alt="">Hardware</li>
+            </ul>
+            <ul class="signals signals--facts">
+              <li><img class="ico" src="assets/images/icons/map-pin-fill.svg" alt="">Fort Lauderdale</li>
+              <li><img class="ico" src="assets/images/icons/translate-fill.svg" alt="">EN · ES · FR · Creole</li>
+              <li><img class="ico" src="assets/images/icons/graduation-cap-fill.svg" alt="">Broward College</li>
+            </ul>
 
             <div class="section" style="padding-top:2.5rem">
               <p class="meta">How I work</p>
@@ -120,7 +133,7 @@
               <p class="meta">LinkedIn · January 2026</p>
               <h2 class="h-md">The tool is secondary.</h2>
               <p>A short video on shipping with Figma and Google AI Studio. The model changes. The job does not: the problem, and the person who has to live with what you built.</p>
-              <p><a href="https://www.linkedin.com/posts/kiffsimon_ive-been-busy-shipping-projects-using-a-activity-7419811820200169472-kQHE" rel="noopener noreferrer">Posted on LinkedIn</a></p>
+              <p><a href="https://www.linkedin.com/posts/kiffsimon_ive-been-busy-shipping-projects-using-a-activity-7419811820200169472-kQHE" target="_blank" rel="noopener noreferrer">Posted on LinkedIn</a></p>
             </div>
             <figure class="source-video">
               <video controls playsinline preload="metadata">
@@ -209,8 +222,8 @@
           <p class="meta">Say hello</p>
           <h2 class="reveal">Internships in software, product, UX, and computer engineering.</h2>
           <p class="lead">I reply within two days. Send the role — I’ll point you at the work that fits.</p>
-          <a class="btn-ink" href="https://www.linkedin.com/in/kiffsimon" rel="noopener noreferrer">LinkedIn</a>
-          <a class="btn-ghost" href="assets/resume.pdf">Resume</a>
+          <a class="btn-ink" href="https://www.linkedin.com/in/kiffsimon" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="btn-ghost" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
         </div>
       </div>
     </section>
@@ -225,17 +238,17 @@
         </div>
         <div>
           <p class="meta footer-label">Contact</p>
-          <a class="footer-link" href="mailto:hello@simonkiff.design">hello@simonkiff.design</a>
-          <a class="footer-link" href="https://www.linkedin.com/in/kiffsimon" rel="noopener noreferrer">LinkedIn</a>
-          <a class="footer-link" href="https://devpost.com/wilkersimon15" rel="noopener noreferrer">Devpost</a>
-          <a class="footer-link" href="https://github.com/Wilker00" rel="noopener noreferrer">GitHub</a>
+          <a class="footer-link" href="mailto:wilkersimon15@gmail.com">wilkersimon15@gmail.com</a>
+          <a class="footer-link" href="https://www.linkedin.com/in/kiffsimon" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="footer-link" href="https://devpost.com/wilkersimon15" target="_blank" rel="noopener noreferrer">Devpost</a>
+          <a class="footer-link" href="https://github.com/Wilker00" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a class="footer-link" href="contact.html">Write a note</a>
         </div>
         <div>
           <p class="meta footer-label">Elsewhere</p>
           <a class="footer-link" href="work.html">Work</a>
           <a class="footer-link" href="about.html">About</a>
-          <a class="footer-link" href="assets/resume.pdf">Resume</a>
+          <a class="footer-link" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -248,8 +261,8 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="js/grain.js" defer></script>
-  <script src="js/nav.js" defer></script>
+  <script src="js/nav.js?v=mail1" defer></script>
   <script src="js/transitions.js" defer></script>
-  <script src="js/interact.js" defer></script>
+  <script src="js/interact.js?v=doodle2" defer></script>
 </body>
 </html>

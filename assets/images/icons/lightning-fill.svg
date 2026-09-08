@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <g transform="translate(1.25 1.4)">
+    <polygon fill="#f0ca3e" points="18,5 9.5,17.5 15.2,17.5 13.2,27 23.2,13.5 17.2,13.5"/>
+  </g>
+  <g stroke="#11110f" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M18 5 9.5 17.5h5.7L13.2 27 23.2 13.5h-6Z"/>
+  </g>
+</svg>

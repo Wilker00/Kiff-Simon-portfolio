@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages.css">
   <link rel="stylesheet" href="css/visual-v2.css">
-  <link rel="stylesheet" href="css/art-direction.css">
+  <link rel="stylesheet" href="css/art-direction.css?v=doodle4">
 </head>
 <body data-page="home">
   <a class="skip-link" href="#content">Skip to content</a>
@@ -32,15 +32,16 @@
   <header class="site-header">
     <div class="container-xl site-header__inner">
       <a class="wordmark" href="index.html">Kiff Simon</a>
-      <nav class="site-nav" aria-label="Primary">
+      <nav class="site-nav" id="primary-nav" aria-label="Primary">
         <a href="work.html">Work</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
+        <a class="nav-resume" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
       </nav>
       <div class="header-actions">
         <p class="avail">Open to internships and roles</p>
-        <a class="btn-ghost" href="assets/resume.pdf">Resume</a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open menu">
+        <a class="btn-ghost" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -58,10 +59,16 @@
           <h1 class="reveal">I design and build products.</h1>
           <p class="lead reveal">Computer Engineering student working across software, AI, product design, and hardware.</p>
           <p class="proof-strip reveal">Broward College. English, Spanish, French, and Creole. Open to internships.</p>
+          <ul class="signals reveal">
+            <li><img class="ico" src="assets/images/icons/code-fill.svg" alt="">Software</li>
+            <li><img class="ico" src="assets/images/icons/sparkle-fill.svg" alt="">AI</li>
+            <li><img class="ico" src="assets/images/icons/pencil-simple-fill.svg" alt="">Product design</li>
+            <li><img class="ico" src="assets/images/icons/cpu-fill.svg" alt="">Hardware</li>
+          </ul>
           <div class="hero__actions">
             <a class="btn-ink" href="work.html">View work</a>
-            <a class="btn-ghost" href="https://github.com/Wilker00" rel="noopener noreferrer">GitHub</a>
-            <a class="btn-ghost" href="assets/resume.pdf">Resume</a>
+            <a class="btn-ghost" href="https://github.com/Wilker00" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="btn-ghost" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
           </div>
         </div>
         <a class="hero__live" href="work/project-four.html" aria-label="Open Neo Sapiens case study">
@@ -94,7 +101,10 @@
             <div class="work-card__body">
               <div class="work-card__top">
                 <span class="meta">2024 · Miami Hack Week</span>
-                <span class="meta">AI · Product</span>
+                <span class="tags">
+                  <span class="tag"><img src="assets/images/icons/sparkle-fill.svg" alt="">AI</span>
+                  <span class="tag"><img src="assets/images/icons/pencil-simple-fill.svg" alt="">Product</span>
+                </span>
               </div>
               <h3>Neo Sapiens</h3>
               <p>Making multi-agent AI understandable. Lead design on a team prototype. Second place at Miami Hack Week.</p>
@@ -109,7 +119,10 @@
             <div class="work-card__body">
               <div class="work-card__top">
                 <span class="meta">2024 · Backdrop v3</span>
-                <span class="meta">Research · UX</span>
+                <span class="tags">
+                  <span class="tag"><img src="assets/images/icons/magnifying-glass-fill.svg" alt="">Research</span>
+                  <span class="tag"><img src="assets/images/icons/bezier-curve-fill.svg" alt="">UX</span>
+                </span>
               </div>
               <h3>Read2Text</h3>
               <p>Fluency practice for students, SLPs, and reading specialists. Research, prototype, real users. Backdrop Build v3 finalist.</p>
@@ -124,7 +137,10 @@
             <div class="work-card__body">
               <div class="work-card__top">
                 <span class="meta">Crossingz · 1st prize</span>
-                <span class="meta">Product · UX</span>
+                <span class="tags">
+                  <span class="tag"><img src="assets/images/icons/users-three-fill.svg" alt="">Matching</span>
+                  <span class="tag"><img src="assets/images/icons/pencil-simple-fill.svg" alt="">UX</span>
+                </span>
               </div>
               <h3>Communify</h3>
               <p>Matching people around shared interests instead of another feed. I designed the product. First prize at Crossingz.</p>
@@ -146,7 +162,7 @@
                 <h3>Mnemonic Passwords</h3>
                 <p>Cognitive psychology and visual cues applied to password recall.</p>
               </div>
-              <span class="meta">Study</span>
+              <span class="tag"><img src="assets/images/icons/magnifying-glass-fill.svg" alt="">Research</span>
             </a>
             <a class="project-row" href="work/project-six.html">
               <div class="project-row__thumb project-art project-art--next" aria-hidden="true">
@@ -158,7 +174,7 @@
                 <h3>Next Step</h3>
                 <p>Mentors, classmates, jobs, internships, and academic help in one student app.</p>
               </div>
-              <span class="meta">Study</span>
+              <span class="tag"><img src="assets/images/icons/cube-fill.svg" alt="">Product</span>
             </a>
             <a class="project-row" href="work/project-seven.html">
               <div class="project-row__thumb project-art project-art--sprinkler" aria-hidden="true">
@@ -170,7 +186,7 @@
                 <h3>Sprinkler Repair System</h3>
                 <p>Live site for a South Florida irrigation company. Designed and built end to end.</p>
               </div>
-              <span class="meta">Live</span>
+              <span class="tag"><img src="assets/images/icons/code-fill.svg" alt="">Full stack</span>
             </a>
           </div>
         </div>
@@ -198,7 +214,7 @@
         <p class="meta">Open to internships</p>
         <h2 class="reveal">Software, product, UX, computer engineering.</h2>
         <p class="lead">One site. Send me the role — I’ll point you at the work that fits.</p>
-        <a class="btn-ink" href="https://www.linkedin.com/in/kiffsimon" rel="noopener noreferrer">LinkedIn</a>
+        <a class="btn-ink" href="https://www.linkedin.com/in/kiffsimon" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a class="btn-ghost" href="contact.html">Write a note</a>
       </div>
     </section>
@@ -214,17 +230,17 @@
         </div>
         <div>
           <p class="meta footer-label">Contact</p>
-          <a class="footer-link" href="mailto:hello@simonkiff.design">hello@simonkiff.design</a>
-          <a class="footer-link" href="https://www.linkedin.com/in/kiffsimon" rel="noopener noreferrer">LinkedIn</a>
-          <a class="footer-link" href="https://devpost.com/wilkersimon15" rel="noopener noreferrer">Devpost</a>
-          <a class="footer-link" href="https://github.com/Wilker00" rel="noopener noreferrer">GitHub</a>
-          <a class="footer-link" href="contact.html">A short note</a>
+          <a class="footer-link" href="mailto:wilkersimon15@gmail.com">wilkersimon15@gmail.com</a>
+          <a class="footer-link" href="https://www.linkedin.com/in/kiffsimon" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="footer-link" href="https://devpost.com/wilkersimon15" target="_blank" rel="noopener noreferrer">Devpost</a>
+          <a class="footer-link" href="https://github.com/Wilker00" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="footer-link" href="contact.html">Write a note</a>
         </div>
         <div>
-          <p class="meta footer-label">Site</p>
+          <p class="meta footer-label">Elsewhere</p>
           <a class="footer-link" href="work.html">Work</a>
           <a class="footer-link" href="about.html">About</a>
-          <a class="footer-link" href="assets/resume.pdf">Resume</a>
+          <a class="footer-link" href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -237,8 +253,8 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="js/grain.js" defer></script>
-  <script src="js/nav.js" defer></script>
+  <script src="js/nav.js?v=mail1" defer></script>
   <script src="js/transitions.js" defer></script>
-  <script src="js/interact.js" defer></script>
+  <script src="js/interact.js?v=doodle2" defer></script>
 </body>
 </html>

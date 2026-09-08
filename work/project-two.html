@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/pages.css">
   <link rel="stylesheet" href="../css/visual-v2.css">
-  <link rel="stylesheet" href="../css/art-direction.css">
+  <link rel="stylesheet" href="../css/art-direction.css?v=doodle4">
 </head>
 <body data-page="case">
   <a class="skip-link" href="#content">Skip to content</a>
@@ -30,15 +30,16 @@
   <header class="site-header">
     <div class="container-xl site-header__inner">
       <a class="wordmark" href="../index.html">Kiff Simon</a>
-      <nav class="site-nav" aria-label="Primary">
+      <nav class="site-nav" id="primary-nav" aria-label="Primary">
         <a href="../work.html" aria-current="page">Work</a>
         <a href="../about.html">About</a>
         <a href="../contact.html">Contact</a>
+        <a class="nav-resume" href="../assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
       </nav>
       <div class="header-actions">
         <p class="avail">Open to internships and roles</p>
-        <a class="btn-ghost" href="../assets/resume.pdf">Resume</a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open menu">
+        <a class="btn-ghost" href="../assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -51,10 +52,10 @@
         <p class="meta">Case study · UX · Backdrop Build v3</p>
         <p class="case-status">Finalist prototype · 3-month build</p>
         <h1>Read2Text — homework a specialist can trust.</h1>
-        <p class="lead">SLPs and reading specialists still send worksheets home. They can’t tell if the practice happened. Read2Text is AI fluency practice — anytime, on any device — with progress the adult can actually see.</p>
+        <p class="lead">Speech-language pathologists (SLPs) and reading specialists still send worksheets home. They can’t tell if the practice happened. Read2Text is AI fluency practice — anytime, on any device — with progress the adult can actually see.</p>
 
         <figure class="case-visual reveal">
-          <img src="../assets/images/case-studies/read2text/hero.jpg" alt="Read2Text fluency practice interface and specialist dashboard">
+          <img src="../assets/images/case-studies/read2text/detail-1.png" alt="Read2Text student practice view and lesson setup">
         </figure>
 
         <dl class="case-meta">
@@ -83,9 +84,6 @@
         <p class="meta">The work</p>
         <h2>Assigning passages and verifying student practice</h2>
         <div class="work-visuals">
-          <figure class="case-visual reveal">
-            <img src="../assets/images/case-studies/read2text/detail-1.png" alt="Read2Text student practice view and lesson setup">
-          </figure>
           <div class="pair">
             <article class="decision">
               <h3>For specialists</h3>
@@ -124,7 +122,6 @@
           <p class="evidence-note">Selected product screens show the visual system beyond the hero crop.</p>
         </div>
         <div class="artifact-grid">
-          <figure class="artifact artifact--wide"><img src="../assets/images/case-studies/read2text/hero.jpg" alt="Read2Text product overview screens" loading="lazy"><figcaption><span>Product overview</span><span>Final direction</span></figcaption></figure>
           <figure class="artifact"><img src="../assets/images/case-studies/read2text/detail-2.jpg" alt="Read2Text interface detail" loading="lazy"><figcaption><span>Specialist workflow</span><span>Interface study</span></figcaption></figure>
           <figure class="artifact"><img src="../assets/images/case-studies/read2text/detail-3.jpg" alt="Read2Text student and educator screens" loading="lazy"><figcaption><span>Student + educator paths</span><span>Prototype</span></figcaption></figure>
         </div>
@@ -231,17 +228,17 @@
         </div>
         <div>
           <p class="meta footer-label">Contact</p>
-          <a class="footer-link" href="mailto:hello@simonkiff.design">hello@simonkiff.design</a>
-          <a class="footer-link" href="https://www.linkedin.com/in/kiffsimon" rel="noopener noreferrer">LinkedIn</a>
-          <a class="footer-link" href="https://devpost.com/wilkersimon15" rel="noopener noreferrer">Devpost</a>
-          <a class="footer-link" href="https://github.com/Wilker00" rel="noopener noreferrer">GitHub</a>
+          <a class="footer-link" href="mailto:wilkersimon15@gmail.com">wilkersimon15@gmail.com</a>
+          <a class="footer-link" href="https://www.linkedin.com/in/kiffsimon" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="footer-link" href="https://devpost.com/wilkersimon15" target="_blank" rel="noopener noreferrer">Devpost</a>
+          <a class="footer-link" href="https://github.com/Wilker00" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a class="footer-link" href="../contact.html">Write a note</a>
         </div>
         <div>
           <p class="meta footer-label">Elsewhere</p>
           <a class="footer-link" href="../work.html">Work</a>
           <a class="footer-link" href="../about.html">About</a>
-          <a class="footer-link" href="../assets/resume.pdf">Resume</a>
+          <a class="footer-link" href="../assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -254,8 +251,8 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="../js/grain.js" defer></script>
-  <script src="../js/nav.js" defer></script>
+  <script src="../js/nav.js?v=mail1" defer></script>
   <script src="../js/transitions.js" defer></script>
-  <script src="../js/interact.js" defer></script>
+  <script src="../js/interact.js?v=doodle2" defer></script>
 </body>
 </html>

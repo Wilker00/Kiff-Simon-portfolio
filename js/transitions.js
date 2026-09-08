@@ -12,6 +12,11 @@
     }
   };
 
+  const isHtmlPage = (url) => {
+    const path = url.pathname;
+    return path.endsWith(".html") || /\/$/.test(path) || !path.split("/").pop()?.includes(".");
+  };
+
   document.addEventListener("click", (event) => {
     const anchor = event.target.closest("a");
     if (!anchor || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
@@ -19,6 +24,7 @@
     if (!sameOrigin(anchor)) return;
 
     const next = new URL(anchor.href, window.location.href);
+    if (!isHtmlPage(next)) return;
     if (next.pathname === window.location.pathname && next.hash) return;
     if (next.href === window.location.href) return;
 

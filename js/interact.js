@@ -90,9 +90,52 @@
       return r + g + b < 90;
     };
 
+    const palette = ["#f0ca3e", "#f15a43", "#3f73c5", "#f0ca3e", "#f15a43", "#3f73c5", "#3c7b5b"];
     const cache = new Map();
 
-    const load = (file) => {
+    const doodle = (svg, color) => {
+      const parts = (svg.getAttribute("viewBox") || "0 0 100 120").trim().split(/[\s,]+/).map(Number);
+      const vb = { x: parts[0] || 0, y: parts[1] || 0, width: parts[2] || 100, height: parts[3] || 120 };
+      const ox = vb.width * 0.038;
+      const oy = vb.height * 0.034;
+      const strokeW = Math.max(2.4, Math.min(vb.width, vb.height) * 0.017);
+      svg.setAttribute("overflow", "visible");
+      svg.setAttribute("viewBox", `${vb.x} ${vb.y} ${vb.width + ox} ${vb.height + oy}`);
+
+      const blobs = document.createElementNS("http://www.w3.org/2000/svg", "g");
+      blobs.setAttribute("transform", `translate(${ox} ${oy})`);
+
+      [...svg.querySelectorAll("path, circle, ellipse, polygon, rect")].forEach((node) => {
+        const fill = node.getAttribute("fill") || "";
+        if (!fill || fill.toLowerCase() === "none") {
+          const stroke = node.getAttribute("stroke") || "";
+          if (stroke && stroke.toLowerCase() !== "none") {
+            node.setAttribute("stroke", "#11110f");
+            node.removeAttribute("stroke-opacity");
+          }
+          return;
+        }
+        if (isHole(fill)) {
+          node.setAttribute("fill", "#11110f");
+          node.removeAttribute("stroke");
+          return;
+        }
+        const blob = node.cloneNode(true);
+        blob.setAttribute("fill", color);
+        blob.removeAttribute("stroke");
+        blobs.appendChild(blob);
+        node.setAttribute("fill", "none");
+        node.setAttribute("stroke", "#11110f");
+        node.setAttribute("stroke-width", String(strokeW));
+        node.setAttribute("stroke-linejoin", "round");
+        node.setAttribute("stroke-linecap", "round");
+        node.removeAttribute("stroke-opacity");
+      });
+
+      if (blobs.childNodes.length) svg.insertBefore(blobs, svg.firstChild);
+    };
+
+    const load = (file, color) => {
       const url = `${base}${file}`;
       if (!cache.has(url)) {
         cache.set(
@@ -105,17 +148,7 @@
               svg.removeAttribute("height");
               svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
               svg.setAttribute("focusable", "false");
-              svg.querySelectorAll("[fill]").forEach((node) => {
-                const fill = node.getAttribute("fill") || "";
-                if (!fill || fill.toLowerCase() === "none") return;
-                node.setAttribute("fill", isHole(fill) ? "var(--paper)" : "currentColor");
-              });
-              svg.querySelectorAll("[stroke]").forEach((node) => {
-                const stroke = node.getAttribute("stroke") || "";
-                if (!stroke || stroke.toLowerCase() === "none") return;
-                node.setAttribute("stroke", isHole(stroke) ? "var(--paper)" : "currentColor");
-                node.setAttribute("stroke-opacity", "0.18");
-              });
+              doodle(svg, color);
               return svg;
             })
         );
@@ -201,7 +234,7 @@
       window.setInterval(playNext, wait);
     };
 
-    Promise.all(frames.map(load))
+    Promise.all(frames.map((file, i) => load(file, palette[i % palette.length])))
       .then((svgs) => {
         reels.forEach((reel) => playReel(reel, svgs));
       })
