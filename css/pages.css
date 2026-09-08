@@ -60,6 +60,54 @@
   margin: 0.35rem 0 0.8rem;
 }
 
+.recruiter-snapshot {
+  padding: 0 0 var(--space-7);
+}
+
+.snapshot-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.2fr);
+  gap: 1.5rem 2rem;
+  padding: 1.35rem 0 1.5rem;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.snapshot-panel__intro h2 {
+  max-width: 18ch;
+  margin: 0.25rem 0 0.45rem;
+  font-size: clamp(1.55rem, 2.5vw, 2.1rem);
+  line-height: 1.08;
+}
+
+.snapshot-panel__intro p {
+  max-width: 32rem;
+  margin: 0;
+  color: var(--muted);
+}
+
+.snapshot-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0;
+}
+
+.snapshot-facts dt {
+  margin-bottom: 0.25rem;
+  color: var(--faint);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.snapshot-facts dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.48;
+}
+
 .featured-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -315,6 +363,15 @@
   }
 
   .hero__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .snapshot-panel {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+
+  .snapshot-facts {
     grid-template-columns: 1fr;
   }
 

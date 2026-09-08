@@ -1,6 +1,7 @@
 # Local browser / preview caches (not part of the site)
 .edge-ui-d/
 .edge-ui-m/
+.edge-rating/
 .preview/
 .ui-preview/
 
