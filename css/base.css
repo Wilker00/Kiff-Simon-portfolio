@@ -144,9 +144,10 @@ p:last-child {
 
 .container,
 .container-xl {
-  width: 100%;
+  width: min(100%, var(--content-w));
   max-width: var(--content-w);
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
   padding-inline: clamp(1rem, 3vw, 1.5rem);
 }
 
