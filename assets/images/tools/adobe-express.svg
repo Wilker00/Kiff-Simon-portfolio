@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 -16 191 166" role="img">
+  <title>Adobe Express</title>
+  <defs>
+    <linearGradient id="express" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF2BC2"/>
+      <stop offset="22%" stop-color="#FF4D00"/>
+      <stop offset="42%" stop-color="#FFB800"/>
+      <stop offset="62%" stop-color="#2EE6A6"/>
+      <stop offset="82%" stop-color="#3B8BFF"/>
+      <stop offset="100%" stop-color="#7A5CFF"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#express)" d="M75.314 49.137 110.78 133.285H87.535l-10.611-26.798H50.97L75.314 49.137zM150.6 0v133.269L94.921 0H150.6zM55.701 0 0 133.269V0h55.701z"/>
+</svg>

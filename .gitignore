@@ -1,0 +1,18 @@
+# Local browser / preview caches (not part of the site)
+.edge-ui-d/
+.edge-ui-m/
+.preview/
+.ui-preview/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Secrets and env
+.env
+.env.*
+
+# Editor
+.idea/
+.vscode/

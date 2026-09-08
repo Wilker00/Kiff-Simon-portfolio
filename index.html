@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kiff Simon — Design and build</title>
+  <meta name="description" content="Kiff Simon, Computer Engineering student in Fort Lauderdale. Designs and builds products across software, AI, and hardware.">
+  <meta name="view-transition" content="same-origin">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/visual-v2.css">
+  <link rel="stylesheet" href="css/art-direction.css">
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#content">Skip to content</a>
+  <div class="atmosphere" aria-hidden="true">
+    <div class="atmosphere__wash"></div>
+    <div class="atmosphere__grain"></div>
+    <div class="atmosphere__grain-spot"></div>
+  </div>
+  <div class="grain-sheet" aria-hidden="true"></div>
+
+  <!-- SHARED:NAV -->
+  <header class="site-header">
+    <div class="container-xl site-header__inner">
+      <a class="wordmark" href="index.html">Kiff Simon</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <p class="avail">Open to internships and roles</p>
+        <a class="btn-ghost" href="assets/resume.pdf">Resume</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="content" class="site-main">
+    <section class="hero">
+      <div class="container-xl hero__grid">
+        <div class="hero__copy">
+          <div class="hero__sign">
+            <div class="mark-reel mark-reel--sign" role="img" aria-label="Custom letterform mark"></div>
+            <p class="meta hero__role reveal">Fort Lauderdale · Computer Engineering</p>
+          </div>
+          <h1 class="reveal">I design and build products.</h1>
+          <p class="lead reveal">Computer Engineering student working across software, AI, product design, and hardware.</p>
+          <p class="proof-strip reveal">Broward College. English, Spanish, French, and Creole. Open to internships.</p>
+          <div class="hero__actions">
+            <a class="btn-ink" href="work.html">View work</a>
+            <a class="btn-ghost" href="https://github.com/Wilker00" rel="noopener noreferrer">GitHub</a>
+            <a class="btn-ghost" href="assets/resume.pdf">Resume</a>
+          </div>
+        </div>
+        <a class="hero__live" href="work/project-four.html" aria-label="Open Neo Sapiens case study">
+          <div class="project-art project-art--hero">
+            <img src="assets/images/case-studies/neo-sapiens/detail-2.jpg" alt="Neo Sapiens parent agent connected to a network of specialist agents">
+            <div class="project-art__label">
+              <span>Neo Sapiens</span>
+              <span>2nd place · Miami Hack Week</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="work-heading">
+      <div class="container-xl">
+        <div class="section-head">
+          <div>
+            <p class="meta">Selected work</p>
+            <h2 id="work-heading" class="reveal">Figure it out, design it, make it real</h2>
+          </div>
+          <a class="btn-ghost" href="work.html">All work</a>
+        </div>
+
+        <div class="featured-grid">
+          <a class="work-card" href="work/project-four.html">
+            <div class="work-card__media project-art project-art--neo">
+              <img src="assets/images/case-studies/neo-sapiens/detail-1.png" alt="Neo Sapiens collaborative AI agent dashboard">
+            </div>
+            <div class="work-card__body">
+              <div class="work-card__top">
+                <span class="meta">2024 · Miami Hack Week</span>
+                <span class="meta">AI · Product</span>
+              </div>
+              <h3>Neo Sapiens</h3>
+              <p>Making multi-agent AI understandable. Lead design on a team prototype. Second place at Miami Hack Week.</p>
+              <span class="work-card__go">View case <i>→</i></span>
+            </div>
+          </a>
+
+          <a class="work-card" href="work/project-two.html">
+            <div class="work-card__media project-art project-art--read">
+              <img src="assets/images/case-studies/read2text/detail-1.png" alt="Read2Text pricing and student practice interface">
+            </div>
+            <div class="work-card__body">
+              <div class="work-card__top">
+                <span class="meta">2024 · Backdrop v3</span>
+                <span class="meta">Research · UX</span>
+              </div>
+              <h3>Read2Text</h3>
+              <p>Fluency practice for students, SLPs, and reading specialists. Research, prototype, real users. Backdrop Build v3 finalist.</p>
+              <span class="work-card__go">View case <i>→</i></span>
+            </div>
+          </a>
+
+          <a class="work-card" href="work/project-three.html">
+            <div class="work-card__media project-art project-art--communify">
+              <img src="assets/images/case-studies/communify/detail-1.png" alt="Communify onboarding shown across four mobile screens">
+            </div>
+            <div class="work-card__body">
+              <div class="work-card__top">
+                <span class="meta">Crossingz · 1st prize</span>
+                <span class="meta">Product · UX</span>
+              </div>
+              <h3>Communify</h3>
+              <p>Matching people around shared interests instead of another feed. I designed the product. First prize at Crossingz.</p>
+              <span class="work-card__go">View case <i>→</i></span>
+            </div>
+          </a>
+        </div>
+
+        <div class="also-list">
+          <p class="meta">Also</p>
+          <div class="work-list">
+            <a class="project-row" href="work/project-five.html">
+              <div class="project-row__thumb project-art project-art--mnemonic" aria-hidden="true">
+                <img src="assets/images/case-studies/mnemonic/detail-1.png" alt="">
+              </div>
+              <span class="idx">04</span>
+              <div>
+                <span class="meta">6 weeks · UX research</span>
+                <h3>Mnemonic Passwords</h3>
+                <p>Cognitive psychology and visual cues applied to password recall.</p>
+              </div>
+              <span class="meta">Study</span>
+            </a>
+            <a class="project-row" href="work/project-six.html">
+              <div class="project-row__thumb project-art project-art--next" aria-hidden="true">
+                <img src="assets/images/case-studies/next-step/detail-1.png" alt="">
+              </div>
+              <span class="idx">05</span>
+              <div>
+                <span class="meta">Student support · Product design</span>
+                <h3>Next Step</h3>
+                <p>Mentors, classmates, jobs, internships, and academic help in one student app.</p>
+              </div>
+              <span class="meta">Study</span>
+            </a>
+            <a class="project-row" href="work/project-seven.html">
+              <div class="project-row__thumb project-art project-art--sprinkler" aria-hidden="true">
+                <img src="assets/images/case-studies/sprinkler/hero.jpg" alt="">
+              </div>
+              <span class="idx">06</span>
+              <div>
+                <span class="meta">Client · Full stack</span>
+                <h3>Sprinkler Repair System</h3>
+                <p>Live site for a South Florida irrigation company. Designed and built end to end.</p>
+              </div>
+              <span class="meta">Live</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="about-teaser-heading">
+      <div class="container-xl">
+        <div class="about-teaser">
+          <div class="portrait">
+            <img src="assets/images/kiff-simon.jpg" alt="Kiff Simon">
+          </div>
+          <div>
+            <p class="meta">About</p>
+            <h2 id="about-teaser-heading" class="reveal">Broward College. Four languages. A camera on the side.</h2>
+            <p class="lead">Google UX Certificate is where I started. The work now is taking a problem, deciding what to build, designing it, and shipping enough that someone can use it.</p>
+            <a class="btn-ghost" href="about.html">About me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="close-cta">
+      <div class="container-xl">
+        <p class="meta">Open to internships</p>
+        <h2 class="reveal">Software, product, UX, computer engineering.</h2>
+        <p class="lead">One site. Send me the role — I’ll point you at the work that fits.</p>
+        <a class="btn-ink" href="https://www.linkedin.com/in/kiffsimon" rel="noopener noreferrer">LinkedIn</a>
+        <a class="btn-ghost" href="contact.html">Write a note</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- SHARED:FOOTER -->
+  <footer class="site-footer">
+    <div class="container-xl">
+      <div class="footer-grid">
+        <div>
+          <p class="meta footer-label">Kiff Simon</p>
+          <p>Designs and builds in Fort Lauderdale. Open to internships.</p>
+        </div>
+        <div>
+          <p class="meta footer-label">Contact</p>
+          <a class="footer-link" href="mailto:hello@simonkiff.design">hello@simonkiff.design</a>
+          <a class="footer-link" href="https://www.linkedin.com/in/kiffsimon" rel="noopener noreferrer">LinkedIn</a>
+          <a class="footer-link" href="https://devpost.com/wilkersimon15" rel="noopener noreferrer">Devpost</a>
+          <a class="footer-link" href="https://github.com/Wilker00" rel="noopener noreferrer">GitHub</a>
+          <a class="footer-link" href="contact.html">A short note</a>
+        </div>
+        <div>
+          <p class="meta footer-label">Site</p>
+          <a class="footer-link" href="work.html">Work</a>
+          <a class="footer-link" href="about.html">About</a>
+          <a class="footer-link" href="assets/resume.pdf">Resume</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Kiff Simon</span>
+        <span>Fort Lauderdale, FL</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="js/grain.js" defer></script>
+  <script src="js/nav.js" defer></script>
+  <script src="js/transitions.js" defer></script>
+  <script src="js/interact.js" defer></script>
+</body>
+</html>
