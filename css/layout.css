@@ -76,8 +76,8 @@
 
 .wordmark {
   font-family: var(--font-display);
-  font-style: italic;
-  font-weight: 500;
+  font-style: normal;
+  font-weight: 700;
   font-size: 1.35rem;
   letter-spacing: -0.02em;
   flex: 0 0 auto;

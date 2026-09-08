@@ -51,10 +51,10 @@
   reveal();
 
   const markReels = () => {
-    const icon = document.querySelector('link[rel="icon"]');
-    const base = icon
-      ? icon.href.replace(/favicon\.svg.*$/, "designs/")
-      : "assets/images/designs/";
+    const script = document.querySelector('script[src*="interact.js"]');
+    const base = script
+      ? new URL("../assets/images/designs/", script.src).href
+      : new URL("assets/images/designs/", document.baseURI).href;
 
     document.querySelectorAll(".footer-bottom").forEach((row) => {
       if (row.querySelector(".mark-reel")) return;
@@ -166,29 +166,24 @@
         stage.replaceChildren();
       }
 
-      svgs.forEach((svg, index) => {
-        const frame = svg.cloneNode(true);
-        if (index === 0) frame.classList.add("is-on");
-        stage.appendChild(frame);
+      svgs.forEach((svg) => {
+        stage.appendChild(svg.cloneNode(true));
       });
 
       const nodes = [...stage.children];
       const last = nodes.length - 1;
-      nodes.forEach((node, index) => node.classList.toggle("is-on", index === last));
-      if (reduced) return;
-
-      const fade = 0.28;
-      const step = 380;
-      const wait = 2 * 60 * 1000;
       const canTween = typeof gsap !== "undefined";
+      const fade = 0.45;
+      const hold = 60 * 1000;
       let current = last;
-      let running = false;
-      let nextShow = 0;
 
-      if (canTween) {
-        gsap.set(nodes, { opacity: 0 });
-        gsap.set(nodes[last], { opacity: 1 });
-      }
+      nodes.forEach((node, index) => {
+        node.classList.toggle("is-on", index === last);
+        if (canTween) gsap.set(node, { opacity: index === last ? 1 : 0 });
+      });
+      reel.classList.add("is-ready");
+
+      if (reduced || nodes.length < 2) return;
 
       const show = (next) => {
         if (next === current) return;
@@ -202,36 +197,10 @@
         current = next;
       };
 
-      const playPath = (path) => {
-        if (running) return Promise.resolve();
-        running = true;
-        return new Promise((resolve) => {
-          let i = 0;
-          show(path[0]);
-          const tick = () => {
-            i += 1;
-            if (i >= path.length) {
-              running = false;
-              resolve();
-              return;
-            }
-            show(path[i]);
-            window.setTimeout(tick, step);
-          };
-          window.setTimeout(tick, step);
-        });
-      };
-
-      const build = [0, 1, 2, 3, 4, 5, last];
-      const rewind = [last, 5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5, last];
-
-      const playNext = () => {
-        const path = nextShow % 2 === 0 ? build : rewind;
-        nextShow += 1;
-        playPath(path);
-      };
-
-      window.setInterval(playNext, wait);
+      window.setInterval(() => {
+        if (document.hidden) return;
+        show((current + 1) % nodes.length);
+      }, hold);
     };
 
     Promise.all(frames.map((file, i) => load(file, palette[i % palette.length])))
