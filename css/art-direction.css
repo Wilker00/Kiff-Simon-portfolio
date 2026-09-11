@@ -1,4 +1,4 @@
-/* Digital editorial art direction — inspired by Swiss print systems and art-led product archives. */
+/* Digital editorial art direction - inspired by Swiss print systems and art-led product archives. */
 :root {
   --paper: #f4f3ee;
   --paper-bright: #fbfaf5;
@@ -721,6 +721,7 @@ a.btn-ghost[href*="about.html"]::before,
 a.btn-ink[href*="contact.html"]::before,
 a.btn-ghost[href*="contact.html"]::before,
 a.btn-ink[href*="resume"]::before,
+a.btn-ink[href="/"]::before,
 a.btn-ink[href*="index.html"]::before,
 a.btn-ink[href*="project-"]::before,
 a.btn-ink[href*="neo-sapiens"]::before,
@@ -788,6 +789,7 @@ a.btn-ghost[href*="about.html"]::before {
   --ico: url("../assets/images/icons/user-fill.svg");
 }
 
+a.btn-ink[href="/"]::before,
 a.btn-ink[href*="index.html"]::before {
   --ico: url("../assets/images/icons/house-simple-fill.svg");
 }
