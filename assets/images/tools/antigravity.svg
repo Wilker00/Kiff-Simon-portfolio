@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img">
+  <title>Antigravity</title>
+  <path fill="#3186FF" d="M12 2.1 4.2 18.6h3.05l1.35-2.85h6.8l1.35 2.85H19.8L12 2.1zm0 5.15 2.35 4.95h-4.7L12 7.25z"/>
+  <rect x="3.4" y="20.15" width="4.4" height="1.75" rx=".55" fill="#FC413D"/>
+  <rect x="9.8" y="20.15" width="4.4" height="1.75" rx=".55" fill="#FBBC04"/>
+  <rect x="16.2" y="20.15" width="4.4" height="1.75" rx=".55" fill="#00B95C"/>
+</svg>

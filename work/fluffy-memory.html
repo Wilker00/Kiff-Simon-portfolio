@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fluffy Memory | Kiff Simon</title>
+  <meta name="description" content="Fluffy Memory: a multi-agent system for matching people to qualified opportunities, preparing materials, and recording approvals.">
+  <meta property="og:title" content="Fluffy Memory | Kiff Simon">
+  <meta property="og:description" content="Fluffy Memory: a multi-agent system for matching people to qualified opportunities, preparing materials, and recording approvals.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../assets/images/kiff-simon.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="view-transition" content="same-origin">
+  <link rel="icon" href="../assets/images/favicon-32.png?v=photo1" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png?v=photo1">
+  <meta name="theme-color" content="#f4f3ee">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css?v=center1">
+  <link rel="stylesheet" href="../css/layout.css?v=orig1">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages.css">
+<link rel="stylesheet" href="../css/art-direction.css?v=stickers1">
+</head>
+<body data-page="case">
+  <a class="skip-link" href="#content">Skip to content</a>
+  <div class="atmosphere" aria-hidden="true"><div class="atmosphere__wash"></div><div class="atmosphere__grain"></div><div class="atmosphere__grain-spot"></div></div>
+  <div class="grain-sheet" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container-xl site-header__inner">
+      <a class="wordmark" href="../index.html">Kiff Simon</a>
+      <nav class="site-nav" id="primary-nav" aria-label="Primary"><a href="../work.html" aria-current="page">Work</a><a href="../about.html">About</a><a href="../contact.html">Contact</a><a class="nav-resume" href="../assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></nav>
+      <div class="header-actions"><p class="avail">Open to internships and roles</p><a class="btn-ghost" href="../assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu"><span></span><span></span><span></span></button></div>
+    </div>
+  </header>
+  <main id="content" class="site-main">
+    <article class="case-hero">
+      <div class="container-xl">
+        <p class="meta">Technical build / AI agents / 2026</p>
+        <p class="case-status">Systems write-up with source and docs. Not a visual product case.</p>
+        <h1>Fluffy Memory. Agents that keep track of evidence and approval.</h1>
+        <p class="lead">A multi-agent system for finding opportunities someone is qualified for, preparing application materials from verified evidence, pausing before sensitive actions, and recording the final result.</p>
+        <ul class="sticker-row" aria-label="Skills and tools">
+          <li class="sticker sticker--skill sticker--red" style="--tilt:-1.6deg"><img src="../assets/images/icons/sparkle-fill.svg" alt="">AI</li>
+          <li class="sticker sticker--skill sticker--green" style="--tilt:1.2deg"><img src="../assets/images/icons/cpu-fill.svg" alt="">Backend</li>
+          <li class="sticker sticker--tool" style="--tilt:-1.1deg"><img src="../assets/images/tools/python.svg" alt="">Python</li>
+          <li class="sticker sticker--tool" style="--tilt:1.4deg"><img src="../assets/images/tools/github.svg" alt="">GitHub</li>
+          <li class="sticker sticker--tool" style="--tilt:-1.3deg"><img src="../assets/images/tools/claude.svg" alt="">Claude</li>
+          <li class="sticker sticker--tool" style="--tilt:1.1deg"><img src="../assets/images/tools/codex.svg" alt="">Codex</li>
+          <li class="sticker sticker--tool" style="--tilt:-0.8deg"><img src="../assets/images/tools/antigravity.svg" alt="">Antigravity</li>
+          <li class="sticker sticker--tool" style="--tilt:1.5deg"><img src="../assets/images/tools/cursor.svg" alt="">Cursor</li>
+          <li class="sticker sticker--tool" style="--tilt:-1.4deg"><img src="../assets/images/tools/copilot.svg" alt="">Copilot</li>
+        </ul>
+        <dl class="case-meta">
+          <div><dt>Role</dt><dd>System designer + builder</dd></div>
+          <div><dt>Stack</dt><dd>Python, ADK-style agents, memory layers</dd></div>
+          <div><dt>Focus</dt><dd>Agent rules + review trails</dd></div>
+          <div><dt>Proof</dt><dd>README, tests, architecture docs</dd></div>
+        </dl>
+      </div>
+    </article>
+    <section class="section" style="padding-top:2.5rem">
+      <div class="container-xl">
+        <p class="meta">What it does</p>
+        <h2>From uploaded evidence to a reviewed outcome.</h2>
+        <div class="prose">
+          <p>The system starts with a person's evidence, such as a resume, transcript, project notes, or other proof. It uses that information to build a profile, search for opportunities that match the evidence, prepare materials, and save the result of each step.</p>
+          <p>The key piece is ARMCL, a three-level memory loop. It keeps live step data, current task history, and long-term facts separate so the system can recover IDs, approvals, past failures, and hard requirements without asking the same questions again.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container-xl">
+        <p class="meta">Decisions</p>
+        <h2>The hard part was deciding what the agents should not do.</h2>
+        <div class="decision-grid">
+          <article class="decision"><h3>Separate the sources</h3><p>Applicant evidence, opportunity requirements, and institutional rules stay separate so a user document cannot quietly change the decision rules.</p></article>
+          <article class="decision"><h3>Ask before submitting</h3><p>The system can recommend and prepare materials, but external submission waits for approval unless the user already gave clear permission.</p></article>
+          <article class="decision"><h3>Remember refusals</h3><p>When a plan is rejected or unsafe, the system records that result so a later run does not try the same path again.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container-xl">
+        <p class="meta">How it works</p>
+        <h2>The project is structured as a workflow, not one giant chatbot.</h2>
+        <div class="prose">
+          <p>A collaborative intake partner screens uploaded evidence, searches only inside the correct tenant and application, identifies missing proof, and prepares a handoff. A separate opportunity partner turns that evidence into a grounded profile, finds matches, and prepares materials without owning the submission tool.</p>
+          <p>The autonomous fleet then runs through scout, analyst, approval, executor, critic, and explainer roles. Each role has a tighter job than a general assistant: scout finds the case, analyst checks evidence and policy, approval pauses risky actions, executor records the action, critic verifies the artifact or receipt, and explainer reconstructs the decision afterward.</p>
+          <p>This separation is the point of the project. It shows how I think about agent systems in <span class="sticker sticker--inline sticker--tool" style="--tilt:-1.2deg"><img src="../assets/images/tools/python.svg" alt="">Python</span> when the model is allowed to help with real decisions: narrow responsibilities, explicit memory permissions, deterministic checks, and a visible audit trail.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container-xl">
+        <p class="meta">What I built</p>
+        <h2>A demo that can be run and checked.</h2>
+        <div class="decision-grid">
+          <article class="decision"><h3>Memory architecture</h3><p>I designed the ARMCL loop around scratchpad, episodic, and semantic memory so the system can recover IDs, constraints, approvals, and previous failures without asking the user again.</p></article>
+          <article class="decision"><h3>Agent contracts</h3><p>The fleet separates intake, search, action, verification, and explanation into different workers with declared capabilities instead of giving one model every tool.</p></article>
+          <article class="decision"><h3>Safety paths</h3><p>The project includes approval gates, idempotency keys, circuit-breaker behavior, redaction boundaries, and refusal records that survive later runs.</p></article>
+          <article class="decision"><h3>Local demo</h3><p>The local run path prints node transitions and memory state, so someone reviewing the repo can see the workflow without deploying it.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container-xl">
+        <p class="meta">Portfolio takeaway</p>
+        <h2>This is the project I would show for AI systems judgment.</h2>
+        <div class="prose">
+          <p>Fluffy Memory is not just “AI for job applications.” The stronger story is that I designed a workflow where evidence cannot silently become policy, model output cannot submit without authorization, and the final outcome can be inspected later.</p>
+          <p>For recruiters, this should show that I can think about product value and backend risk at the same time. The user wants opportunities, but the system still has to protect truthfulness, consent, privacy, and repeatability.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container-xl">
+        <div class="source-card"><div><p class="meta">Repository</p><h2 class="h-md">Read the architecture and run the demo path.</h2><p>The repo includes the system write-up, agent responsibilities, local run instructions, and offline deterministic tests.</p></div><a class="btn-ink" href="https://github.com/Wilker00/fluffy-memory" target="_blank" rel="noopener noreferrer">Open GitHub</a></div>
+      </div>
+    </section>
+    <section class="section"><div class="container-xl"><div class="next-project"><div><p class="meta">Next</p><h2 class="h-lg">Multiverse</h2><p>Safety and memory for reinforcement-learning operations.</p></div><div><a class="btn-ink" href="multiverse.html">Next case</a><a class="btn-ghost" href="../work.html">All work</a></div></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="container-xl"><div class="footer-grid"><div><p class="meta footer-label">Kiff Simon</p><p>Designs and builds in Fort Lauderdale. Open to internships.</p></div><div><p class="meta footer-label">Contact</p><a class="footer-link" href="mailto:wilkersimon15@gmail.com">wilkersimon15@gmail.com</a><a class="footer-link" href="https://www.linkedin.com/in/kiffsimon" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="footer-link" href="https://devpost.com/wilkersimon15" target="_blank" rel="noopener noreferrer">Devpost</a><a class="footer-link" href="https://github.com/Wilker00" target="_blank" rel="noopener noreferrer">GitHub</a><a class="footer-link" href="../contact.html">Contact</a></div><div><p class="meta footer-label">Elsewhere</p><a class="footer-link" href="../work.html">Work</a><a class="footer-link" href="../about.html">About</a><a class="footer-link" href="../assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></div></div><div class="footer-bottom"><span>(c) 2026 Kiff Simon</span><span>Fort Lauderdale, FL</span></div></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script><script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script><script src="../js/grain.js" defer></script><script src="../js/nav.js?v=mail1" defer></script><script src="../js/transitions.js" defer></script><script src="../js/interact.js?v=doodle7" defer></script>
+</body>
+</html>

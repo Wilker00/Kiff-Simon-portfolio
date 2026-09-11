@@ -533,6 +533,40 @@ body[data-page="home"] .hero + .section {
   background: #111;
 }
 
+.project-art--agents,
+.project-art--ml,
+.project-art--studentu,
+.project-art--orbsurv {
+  display: grid;
+  place-items: center;
+  background: var(--paper-bright);
+}
+
+.project-art--agents img,
+.project-art--ml img,
+.project-art--studentu img,
+.project-art--orbsurv img {
+  width: 2.4rem;
+  height: 2.4rem;
+  object-fit: contain;
+}
+
+.project-art--agents {
+  background: oklch(95% 0.025 155);
+}
+
+.project-art--ml {
+  background: oklch(95% 0.025 250);
+}
+
+.project-art--studentu {
+  background: oklch(96% 0.035 90);
+}
+
+.project-art--orbsurv {
+  background: oklch(94% 0.025 205);
+}
+
 .also-list {
   margin-top: clamp(2.25rem, 4vw, 3.5rem);
 }
@@ -1095,6 +1129,89 @@ body[data-page="work"] .page-hero .lead {
   font-size: clamp(1rem, 1.3vw, 1.12rem);
 }
 
+.sticker-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem 0.5rem;
+  margin: 1.05rem 0 0;
+  padding: 0;
+  list-style: none;
+  max-width: 42rem;
+}
+
+.sticker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.34rem;
+  padding: 0.3rem 0.58rem 0.3rem 0.32rem;
+  border: 1px solid var(--black);
+  background: var(--paper-bright);
+  color: var(--black);
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
+  white-space: nowrap;
+  transform: rotate(var(--tilt, -1.2deg));
+}
+
+.sticker img {
+  width: 1.12rem;
+  height: 1.12rem;
+  display: block;
+  flex: none;
+  object-fit: contain;
+}
+
+.sticker--skill.sticker--red {
+  background: var(--red);
+  color: #fff;
+}
+
+.sticker--skill.sticker--blue {
+  background: var(--blue);
+  color: #fff;
+}
+
+.sticker--skill.sticker--yellow {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+.sticker--skill.sticker--green {
+  background: var(--green);
+  color: #fff;
+}
+
+.sticker--skill.sticker--red img,
+.sticker--skill.sticker--blue img,
+.sticker--skill.sticker--green img {
+  filter: brightness(0) invert(1);
+}
+
+.sticker--inline {
+  margin: 0 0.16em;
+  padding: 0.12rem 0.4rem 0.12rem 0.2rem;
+  vertical-align: middle;
+}
+
+.sticker--inline img {
+  width: 0.92rem;
+  height: 0.92rem;
+}
+
+.prose .sticker--inline {
+  position: relative;
+  top: -0.05em;
+}
+
+.prose a.sticker {
+  color: inherit;
+  text-decoration: none;
+}
+
 .case-visual,
 .work-visuals > .stage {
   border: 1px solid var(--black);
@@ -1457,7 +1574,8 @@ body[data-page="work"] .project-row__thumb {
   }
 
   .tools li,
-  .tool-sticker {
+  .tool-sticker,
+  .sticker {
     transform: none;
   }
 }
