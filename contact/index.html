@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Page not found | Kiff Simon</title>
-  <meta name="description" content="This page does not exist.">
-  <meta property="og:title" content="Page not found | Kiff Simon">
-  <meta property="og:description" content="This page does not exist.">
+  <title>Contact | Kiff Simon</title>
+  <meta name="description" content="Contact Kiff Simon, Computer Engineering student in Fort Lauderdale. Designs and builds products.">
+  <meta property="og:title" content="Contact | Kiff Simon">
+  <meta property="og:description" content="Contact Kiff Simon, Computer Engineering student in Fort Lauderdale. Designs and builds products.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/images/kiff-simon.jpg">
   <meta name="twitter:card" content="summary">
@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="/css/pages.css">
 <link rel="stylesheet" href="/css/art-direction.css?v=stickers1">
 </head>
-<body data-page="404">
+<body data-page="contact">
   <a class="skip-link" href="#content">Skip to content</a>
   <div class="atmosphere" aria-hidden="true">
     <div class="atmosphere__wash"></div>
@@ -32,13 +32,14 @@
     <div class="atmosphere__grain-spot"></div>
   </div>
   <div class="grain-sheet" aria-hidden="true"></div>
+  <!-- SHARED:NAV -->
   <header class="site-header">
     <div class="container-xl site-header__inner">
       <a class="wordmark" href="/">Kiff Simon</a>
       <nav class="site-nav" id="primary-nav" aria-label="Primary">
         <a href="/work/">Work</a>
         <a href="/about/">About</a>
-        <a href="/contact/">Contact</a>
+        <a href="/contact/" aria-current="page">Contact</a>
         <a class="nav-resume" href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
       </nav>
       <div class="header-actions">
@@ -51,14 +52,40 @@
     </div>
   </header>
 
-  <main id="content" class="site-main error-page">
-    <div class="container-xl">
-      <p class="meta">404</p>
-      <h1 class="reveal">Page not found.</h1>
-      <p class="lead">The page you were looking for doesn't exist.</p>
-      <a class="btn-ink" href="/">Back home</a>
-      <a class="btn-ghost" href="/work/">See work</a>
-    </div>
+  <main id="content" class="site-main">
+    <section class="page-hero">
+      <div class="container-xl page-hero__inner">
+        <div>
+          <p class="meta">Contact</p>
+          <h1 class="reveal">Email or LinkedIn.</h1>
+          <p class="lead">Software, product, UX, and computer engineering. I reply within two days.</p>
+        </div>
+        <div class="mark-reel mark-reel--page" role="img" aria-label="Custom letterform mark"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container-xl">
+        <div class="contact-layout">
+          <div>
+            <p class="meta">Reach me</p>
+            <a class="contact-email" href="mailto:wilkersimon15@gmail.com">wilkersimon15@gmail.com</a>
+            <div class="contact-actions">
+              <a class="btn-ink" href="mailto:wilkersimon15@gmail.com">Email</a>
+              <button class="btn-ghost btn-copy-email" type="button" data-email="wilkersimon15@gmail.com">Copy email</button>
+              <a class="btn-ghost" href="https://www.linkedin.com/in/kiffsimon" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a class="btn-ghost" href="https://devpost.com/wilkersimon15" target="_blank" rel="noopener noreferrer">Devpost</a>
+            </div>
+          </div>
+
+          <div class="contact-also">
+            <p class="meta">Also</p>
+            <a class="footer-link" href="https://github.com/Wilker00" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="footer-link" href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -74,7 +101,6 @@
           <a class="footer-link" href="https://www.linkedin.com/in/kiffsimon" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a class="footer-link" href="https://devpost.com/wilkersimon15" target="_blank" rel="noopener noreferrer">Devpost</a>
           <a class="footer-link" href="https://github.com/Wilker00" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a class="footer-link" href="/contact/">Contact</a>
         </div>
         <div>
           <p class="meta footer-label">Elsewhere</p>

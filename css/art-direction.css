@@ -714,12 +714,12 @@ body[data-page="about"] .portrait--lg {
 .footer-link::before,
 .source-card--video a::before,
 .footer-bottom span:last-child::before,
-a.btn-ink[href*="work.html"]::before,
-a.btn-ghost[href*="work.html"]::before,
-a.btn-ink[href*="about.html"]::before,
-a.btn-ghost[href*="about.html"]::before,
-a.btn-ink[href*="contact.html"]::before,
-a.btn-ghost[href*="contact.html"]::before,
+a.btn-ink[href*="/work/"]::before,
+a.btn-ghost[href*="/work/"]::before,
+a.btn-ink[href*="/about/"]::before,
+a.btn-ghost[href*="/about/"]::before,
+a.btn-ink[href*="/contact/"]::before,
+a.btn-ghost[href*="/contact/"]::before,
 a.btn-ink[href*="resume"]::before,
 a.btn-ink[href="/"]::before,
 a.btn-ink[href*="index.html"]::before,
@@ -771,21 +771,21 @@ a.btn-ghost[href*="resume"]::before {
   --ico: url("../assets/images/icons/file-text-fill.svg");
 }
 
-.footer-link[href*="contact.html"]::before,
-a.btn-ink[href*="contact.html"]::before,
-a.btn-ghost[href*="contact.html"]::before {
+.footer-link[href*="/contact/"]::before,
+a.btn-ink[href*="/contact/"]::before,
+a.btn-ghost[href*="/contact/"]::before {
   --ico: url("../assets/images/icons/chat-teardrop-text-fill.svg");
 }
 
-.footer-link[href*="work.html"]::before,
-a.btn-ink[href*="work.html"]::before,
-a.btn-ghost[href*="work.html"]::before {
+.footer-link[href*="/work/"]::before,
+a.btn-ink[href*="/work/"]::before,
+a.btn-ghost[href*="/work/"]::before {
   --ico: url("../assets/images/icons/briefcase-fill.svg");
 }
 
-.footer-link[href*="about.html"]::before,
-a.btn-ink[href*="about.html"]::before,
-a.btn-ghost[href*="about.html"]::before {
+.footer-link[href*="/about/"]::before,
+a.btn-ink[href*="/about/"]::before,
+a.btn-ghost[href*="/about/"]::before {
   --ico: url("../assets/images/icons/user-fill.svg");
 }
 
