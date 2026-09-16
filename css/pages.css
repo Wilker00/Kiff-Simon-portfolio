@@ -199,6 +199,31 @@
   font-weight: 600;
 }
 
+.case-path {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin: 0 0 0.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.case-path li {
+  padding-top: 0.6rem;
+  border-top: 2px solid var(--ink);
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.25;
+}
+
+.case-path b {
+  display: block;
+  color: var(--ink);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .case-visual {
   margin-top: 1.5rem;
   min-height: 22rem;
@@ -362,6 +387,10 @@
     grid-template-columns: 1fr 1fr;
   }
 
+  .case-path {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .hero__grid {
     grid-template-columns: 1fr;
   }
@@ -414,6 +443,10 @@
   .work-visuals .pair,
   .about-teaser {
     grid-template-columns: 1fr;
+  }
+
+  .case-path {
+    grid-template-columns: 1fr 1fr;
   }
 
   .featured-grid .work-card:first-child .work-card__media {
