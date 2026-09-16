@@ -96,15 +96,67 @@ body {
 
 @media (max-width: 991.98px) {
   .site-nav {
-    gap: 0.8rem;
-    padding: 2rem 1.25rem 3rem;
+    counter-reset: navigation;
+    gap: 0;
+    padding: 1.15rem 1.25rem 2.5rem;
     background: var(--paper-bright);
     border-top: 1px solid var(--rule);
   }
 
+  .site-nav::before {
+    content: "Navigation / 04";
+    width: 100%;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--rule);
+    color: var(--faint);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
   .site-nav a {
-    font-size: clamp(1.85rem, 6vw, 2.6rem);
+    display: grid;
+    grid-template-columns: 2.4rem 1fr auto;
+    align-items: baseline;
+    width: 100%;
+    min-height: 0;
+    padding: clamp(0.85rem, 3.2vw, 1.2rem) 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: clamp(2rem, 7vw, 2.85rem);
     letter-spacing: -0.04em;
+    opacity: 0;
+    transform: translateX(-0.85rem);
+    transition: color 180ms ease, opacity 360ms var(--ease), transform 360ms var(--ease);
+  }
+
+  .site-nav a::before {
+    content: counter(navigation, decimal-leading-zero);
+    counter-increment: navigation;
+    color: var(--faint);
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+  }
+
+  .site-nav a::after {
+    content: "\2197";
+    position: static;
+    width: auto;
+    height: auto;
+    background: transparent;
+    color: var(--blue);
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    line-height: 1;
+    transform: translate(-0.3rem, 0.1rem);
+    transition: transform 180ms var(--ease);
+  }
+
+  .site-nav a:hover::after,
+  .site-nav a[aria-current="page"]::after {
+    transform: translate(0, -0.1rem);
   }
 
   .site-nav a:hover,
@@ -115,6 +167,16 @@ body {
   .nav-toggle {
     border-radius: 0;
   }
+
+  body.nav-open .site-nav a {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  body.nav-open .site-nav a:nth-of-type(1) { transition-delay: 60ms; }
+  body.nav-open .site-nav a:nth-of-type(2) { transition-delay: 110ms; }
+  body.nav-open .site-nav a:nth-of-type(3) { transition-delay: 160ms; }
+  body.nav-open .site-nav a:nth-of-type(4) { transition-delay: 210ms; }
 }
 
 .site-nav a {
@@ -140,6 +202,39 @@ body {
 .site-nav a:hover::after,
 .site-nav a[aria-current="page"]::after {
   transform: scaleX(1);
+}
+
+@media (max-width: 991.98px) {
+  .site-nav a {
+    min-height: 0;
+    padding: clamp(0.85rem, 3.2vw, 1.2rem) 0;
+    font-size: clamp(2rem, 7vw, 2.85rem);
+  }
+
+  .site-nav .nav-resume {
+    display: grid;
+    min-height: 0;
+  }
+
+  .site-nav a::after {
+    content: "\2197";
+    position: static;
+    width: auto;
+    height: auto;
+    background: transparent;
+    color: var(--blue);
+    transform: translate(-0.3rem, 0.1rem);
+  }
+
+  .site-nav a:hover,
+  .site-nav a[aria-current="page"] {
+    color: var(--blue);
+  }
+
+  .site-nav a:hover::after,
+  .site-nav a[aria-current="page"]::after {
+    transform: translate(0, -0.1rem);
+  }
 }
 
 .header-actions {
